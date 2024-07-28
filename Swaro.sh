@@ -96,7 +96,7 @@ main().catch((error) => {
 });
 EOL
 echo "deploy.js script created."
-
+uu
 echo "Deploying the contract..."
 npx hardhat run scripts/deploy.js --network swisstronik
 echo "Contract deployed."
@@ -106,7 +106,7 @@ cat <<EOL > scripts/mint.js
 const hre = require("hardhat");
 const fs = require("fs");
 const { encryptDataField, decryptNodeResponse } = require("@swisstronik/utils");
-
+git add . && git commit -m "feat: initiated the project" && git push origin main
 const sendShieldedTransaction = async (signer, destination, data, value) => {
   const rpcLink = hre.network.config.url;
   const [encryptedData] = await encryptDataField(rpcLink, data);
